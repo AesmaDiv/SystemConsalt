@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Aesma Div\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Aesma Div\\.nuget\\packages"
+    ]
+  }
+}

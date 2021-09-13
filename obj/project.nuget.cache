@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "w7qq0Jkj7K9tCTeRZ010CWHU/3Lsby5gkMXY2WHkPjkOZl3Hv2a8kLn5YUZ293Q/Xq1peKTdgh52HKYNCc/EjA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\CSharp\\TermGUI\\TermGUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aesma Div\\.nuget\\packages\\nstack.core\\0.16.0\\nstack.core.0.16.0.nupkg.sha512",
+    "C:\\Users\\Aesma Div\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Aesma Div\\.nuget\\packages\\terminal.gui\\1.2.1\\terminal.gui.1.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
