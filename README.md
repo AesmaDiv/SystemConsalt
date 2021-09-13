@@ -24,3 +24,5 @@
 - **Meeting:** _класс встречи_
 - **Scheduler:** _класс ежедневника_
 - **GUI:** класс _консольного интерфейса_
+
+![alt text](https://github.com/AesmaDiv/SystemConsalt/img/SystemConsult.jpg?raw=true)
