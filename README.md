@@ -1,3 +1,4 @@
+![SystemConsult](https://user-images.githubusercontent.com/34000496/133040494-df4565fd-bab8-42ed-a454-91ee44876626.jpg)
 # Тестовое задание для Систем Консалт
 
 ## Задание:
@@ -24,5 +25,3 @@
 - **Meeting:** _класс встречи_
 - **Scheduler:** _класс ежедневника_
 - **GUI:** класс _консольного интерфейса_
-
-![alt text](https://github.com/AesmaDiv/SystemConsult/blob/main/img/SystemConsult.jpg?raw=true)
