@@ -27,6 +27,15 @@ class GUI {
     // Контейнер для сообщений об оповещении
     FrameView frmAlerts;
     
+    // реализация паттерна Singleton
+    private static GUI _instance;
+    private GUI() { }
+    public static GUI GetInstance () {
+        if (_instance == null) {
+            _instance = new GUI();
+        }
+        return _instance;
+    }
     private Meeting[] _meetings = new Meeting[0];
     /// Типы событий интерфейса
     public enum EventTypes {
