@@ -25,4 +25,4 @@
 - **Scheduler:** _класс ежедневника_
 - **GUI:** класс _консольного интерфейса_
 
-![alt text](https://github.com/AesmaDiv/SystemConsalt/blob/main/img/SystemConsult.jpg?raw=true)
+![alt text](https://github.com/AesmaDiv/SystemConsult/blob/main/img/SystemConsult.jpg?raw=true)
