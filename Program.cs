@@ -22,7 +22,7 @@ namespace TermGUI
             var tmr = new Timer(OnTimerEvent);
             // инициализация основных компонентов
             _scheduler = new Scheduler(new MeetingValidator());
-            _gui = new GUI();
+            _gui = GUI.GetInstance();
             _gui.Init("Ежедневник");
             // регистрация обработчика событий интерфейса
             _gui.OnEvent += OnGuiEvent;
