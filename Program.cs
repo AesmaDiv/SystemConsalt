@@ -11,22 +11,29 @@ namespace TermGUI
 {
     class Program
     {
+        // ежедневник
         private static Scheduler _scheduler;
+        // графический интрефейс
         private static GUI _gui;
 
         static void Main(string[] args)
         {
+            // инициализация таймера для обновления текущего времени и проверки оповещений
             var tmr = new Timer(OnTimerEvent);
-
+            // инициализация основных компонентов
             _scheduler = new Scheduler(new MeetingValidator());
             _gui = new GUI();
-            _gui.OnEvent += OnGuiEvent;
-
             _gui.Init("Ежедневник");
+            // регистрация обработчика событий интерфейса
+            _gui.OnEvent += OnGuiEvent;
+            
+            // заполнение списка встречь
             Prefill();
             tmr.Change(1000, 1000);
+            // запуск основного цикла графического интерфейса
             _gui.Run();
-
+            
+            // остановка и уничтожение таймера
             tmr.Change(Timeout.Infinite, Timeout.Infinite);
             tmr.Dispose();
         }
