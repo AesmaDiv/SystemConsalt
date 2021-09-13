@@ -70,8 +70,8 @@ class GUI {
     }
     /// Обновление списка встреч
     public void RefreshMeetings(Meeting[] meetings) {
-        // если дата фильтра не равна 01.01.2001 - отобразить все
-        // если равна - отобразить назначенные на указанную дату
+        // если дата фильтра равна 01.01.2001 - отобразить все
+        // если не равна - отобразить назначенные на указанную дату
         _meetings = meetings;
         lstMeetings.SetSource(
             filterDate.Date == DateTime.Parse("01.01.01").Date ? _meetings : 
