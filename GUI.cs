@@ -7,7 +7,6 @@
 using System;
 using Terminal.Gui;
 
-
 class GUI {
     public event EventHandler<GUIEventArgs> OnEvent;
     /// Класс аргументов для трансляции события интерфейса
