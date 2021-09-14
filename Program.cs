@@ -108,7 +108,7 @@ namespace TermGUI
             _gui.RefreshMeetings(_scheduler.Meetings);
         }
         /// Обработка событий интерфейса
-        private static void OnGuiEvent(object sender, GUIEventArgs args) {
+        private static void OnGuiEvent(object sender, GUI.GUIEventArgs args) {
             switch (args.EventType) {
                 // фильтрация по дате
                 case GUI.EventTypes.Filter:
