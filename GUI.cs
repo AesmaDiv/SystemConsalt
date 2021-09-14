@@ -7,16 +7,16 @@
 using System;
 using Terminal.Gui;
 
-/// Класс аргументов для трансляции события интерфейса
-class GUIEventArgs : EventArgs {
-    /// Тип события
-    public GUI.EventTypes EventType { get; set; }
-    /// Сопутствующие данные
-    public object EventData { get; set; }
-}
 
 class GUI {
     public event EventHandler<GUIEventArgs> OnEvent;
+    /// Класс аргументов для трансляции события интерфейса
+    public class GUIEventArgs : EventArgs {
+        /// Тип события
+        public GUI.EventTypes EventType { get; set; }
+        /// Сопутствующие данные
+        public object EventData { get; set; }
+    }
     /// Типы событий интерфейса
     public enum EventTypes {
         Filter, Select, Create, Update, Remove, Save, Quit
