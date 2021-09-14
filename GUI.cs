@@ -7,9 +7,21 @@
 using System;
 using Terminal.Gui;
 
+/// Класс аргументов для трансляции события интерфейса
+class GUIEventArgs : EventArgs {
+    /// Тип события
+    public GUI.EventTypes EventType { get; set; }
+    /// Сопутствующие данные
+    public object EventData { get; set; }
+}
 
 class GUI {
     public event EventHandler<GUIEventArgs> OnEvent;
+    /// Типы событий интерфейса
+    public enum EventTypes {
+        Filter, Select, Create, Update, Remove, Save, Quit
+    }
+
     // Дата для фильтрации
     DateField filterDate;
     // Текущее время
@@ -27,6 +39,8 @@ class GUI {
     // Контейнер для сообщений об оповещении
     FrameView frmAlerts;
     
+    private Meeting[] _meetings = new Meeting[0];
+    
     // реализация паттерна Singleton
     private static GUI _instance;
     private GUI() { }
@@ -36,11 +50,7 @@ class GUI {
         }
         return _instance;
     }
-    private Meeting[] _meetings = new Meeting[0];
-    /// Типы событий интерфейса
-    public enum EventTypes {
-        Filter, Select, Create, Update, Remove, Save, Quit
-    }
+    
     /// Инициализация интерфейса
     public void Init(string title) {
         Application.Init();
@@ -232,7 +242,7 @@ class GUI {
         BroadcastEvent(new GUIEventArgs() 
         { EventType = EventTypes.Filter, EventData = args.NewValue });
     }
-    /// Изменение выбранной встречи в списке
+    /// Выбор встречи в списке
     private void OnMeetingSelected(object obj) {
         var args = obj as ListViewItemEventArgs;
         BroadcastEvent(new GUIEventArgs() 
@@ -273,18 +283,10 @@ class GUI {
             EventData = lstMeetings.Source.ToList()
         });
     }
-    /// Трансляция события во вне
+    /// Трансляция события наружу
     private void BroadcastEvent(GUIEventArgs args) {
         if (OnEvent != null)
             OnEvent(this, args);
     }
     #endregion
-}
-
-/// Класс аргументов для трансляции события интерфейса
-class GUIEventArgs : EventArgs {
-    /// Тип события
-    public GUI.EventTypes EventType { get; set; }
-    /// Сопутствующие данные
-    public object EventData { get; set; }
 }
